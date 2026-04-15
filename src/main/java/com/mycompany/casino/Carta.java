@@ -16,7 +16,7 @@ public Carta(String palo, String valor) {
         if (valor.equals("J") || valor.equals("Q") || valor.equals("K"))
             return 10;
 
-        if (valor.equals("A"))
+        if (valor.equals("As"))
             return 11;
 
         return Integer.parseInt(valor);

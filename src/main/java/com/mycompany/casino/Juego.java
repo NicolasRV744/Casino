@@ -64,7 +64,7 @@ public class Juego {
             System.out.println("1. Plantarse");
             System.out.println("2. Pedir carta");
 
-           int opcion = Input.nextInt("1. Plantarse\n2. Pedir carta\nElige: ");
+            int opcion = Input.nextInt("Elige: ");
             if (opcion == 2) {
                 jugador.recibirCarta(mazo.robarCarta());
             } else if (opcion == 1) {
