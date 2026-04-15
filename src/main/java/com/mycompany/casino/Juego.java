@@ -33,6 +33,7 @@ public class Juego {
         dealer.limpiarMano();
 
         mazo = new Mazo();
+        mazo.barajar();
 
         // cartas iniciales
         jugador.recibirCarta(mazo.robarCarta());

@@ -30,6 +30,20 @@ public class Mazo {
         return (Carta) cartas.desencolar(); 
     }
       public void barajar() {
-        System.out.println("Mazo listo (sin barajar)");
+    Random rand = new Random();
+
+    int n = 52;
+
+    for (int i = 0; i < n * 2; i++) {
+
+        int pasos = rand.nextInt(n);
+
+        for (int j = 0; j < pasos; j++) {
+            Carta c = (Carta) cartas.desencolar();
+            cartas.encolar(c);
+        }
     }
+
+    System.out.println("Mazo barajado");
+ }
 }
