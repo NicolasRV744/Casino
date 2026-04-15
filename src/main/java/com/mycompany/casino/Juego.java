@@ -100,7 +100,13 @@ public class Juego {
             dealer.recibirCarta(mazo.robarCarta());
         }
 
-        System.out.println("Dealer se planta con " + dealer.calcularPuntos());
+        int puntosDealer = dealer.calcularPuntos();
+
+       if (puntosDealer > 21) {
+       System.out.println("Dealer se pasó con " + puntosDealer);
+       } else {
+       System.out.println("Dealer se planta con " + puntosDealer);
+}
     }
 
     private void mostrarGanador() {
