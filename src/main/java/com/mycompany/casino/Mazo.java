@@ -35,6 +35,8 @@ public class Mazo {
     int n = 52;
 
     for (int i = 0; i < n * 2; i++) {
+        
+        Carta carta1 = (Carta) cartas.desencolar();
 
         int pasos = rand.nextInt(n);
 
@@ -42,6 +44,7 @@ public class Mazo {
             Carta c = (Carta) cartas.desencolar();
             cartas.encolar(c);
         }
+        cartas.encolar(carta1);
     }
 
     System.out.println("Mazo barajado");

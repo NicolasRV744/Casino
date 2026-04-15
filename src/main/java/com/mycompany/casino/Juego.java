@@ -16,6 +16,8 @@ public class Juego {
 
     jugador = new Jugador(nombre);
     dealer = new Jugador("Dealer");
+    
+    boolean seguirJugando = true;
 
     mazo = new Mazo();
     mazo.barajar();
