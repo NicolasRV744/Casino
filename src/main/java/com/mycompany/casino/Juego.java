@@ -18,16 +18,31 @@ public class Juego {
     dealer = new Jugador("Dealer");
     
     boolean seguirJugando = true;
+    while (seguirJugando) {
 
     mazo = new Mazo();
     mazo.barajar();
 
     int rondas = 3;
-
+    
     for (int i = 1; i <= rondas; i++) {
-        System.out.println("\n===== RONDA " + i + " =====");
+        System.out.println("\n=======================");
+        System.out.println("      RONDA " + i);
+        System.out.println("=======================");
         jugarRonda();
     }
+     Input.nextLine("");
+       System.out.println("\n==============================");
+       System.out.println("¿Quieres jugar otras 3 rondas?");
+       String opcion = Input.nextLine("(si/no): ");
+       System.out.println("==============================\n");
+
+        if (opcion.equalsIgnoreCase("no")) {
+            seguirJugando = false;
+            System.out.println("Gracias por jugar");
+        }
+    }
+    
 }
     private void jugarRonda() {
 
@@ -72,7 +87,7 @@ public class Juego {
                 jugador.recibirCarta(mazo.robarCarta());
             } else if (opcion == 1) {
                 seguir = false;
-                System.out.println("Te plantaste con " + puntos);
+                System.out.println("Te plantaste con: " + puntos);
             } else {
                 System.out.println("Opcion invalida");
             }
@@ -92,7 +107,8 @@ public class Juego {
 
         int p1 = jugador.calcularPuntos();
         int p2 = dealer.calcularPuntos();
-
+        
+        System.out.println("\n----- RESULTADO -----");
         System.out.println("Jugador: " + p1);
         System.out.println("Dealer: " + p2);
 
